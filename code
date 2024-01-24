@@ -1,0 +1,27 @@
+class GfG
+{
+	public static int palinArray(int[] a, int n)
+           {
+
+              for(int i=0;i<n;i++){
+                     if(!ispallindrome(a[i])){
+                            return 0;
+                     }
+              }
+              return 1;
+                  //add code here.
+           }
+
+           static boolean ispallindrome(int num){
+              int originalnum=num;
+              int reversenum=0;
+              while(num>0){
+                     int digit=num%10;
+                     reversenum=reversenum*10+digit;
+                     num/=10;
+
+              }
+
+              return originalnum==reversenum;
+           }
+}
